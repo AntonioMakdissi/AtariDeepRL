@@ -1,0 +1,3 @@
+Why?
+we may also want the environment to end after a fixed number of timesteps, in this case, the environment issues a truncated signal.
+just in case smtg goes wrong, and get better 

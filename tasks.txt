@@ -1,0 +1,18 @@
+DRL
+------------------------------
+Ressources: 
+- start with https://gymnasium.farama.org/content/basic_usage/
+- stable baselines3 https://stable-baselines3.readthedocs.io/en/master/guide/examples.html#try-it-online-with-colab-notebooks
+additional:
+- neural nets : https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
+- dqn paper: https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf 2, graphs
+
+Introduction:
+- Try to watch Olivier Sigaud's videos number 1, 2, 4, 7 from this playlist 
+https://youtube.com/playlist?list=PLe5mY-Da-ksWV330WbfazLUyOuR59sers&si=au5IYGCrsX4mPjne on reinforcement learning for a good introduction to the topic. 
+- Have a look at this introductory notebook on the most used library for RL : 
+https://colab.research.google.com/github/Stable-Baselines-Team/rl-colab-notebooks/blob/sb3/stable_baselines_getting_started.ipynb
+
+------------------------------
+Task:
+Plot performances of DQN agent on atari game breakout
