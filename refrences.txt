@@ -1,0 +1,20 @@
+Gymnasium documentation:
+https://gymnasium.farama.org/content/basic_usage/
+stable-baselines3 documentation:
+https://stable-baselines3.readthedocs.io/en/master/guide/examples.html#try-it-online-with-colab-notebooks
+DQN paper:
+https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf
+Olivier Sigaud's videos playlist on reinforcement learning:
+https://youtube.com/playlist?list=PLe5mY-Da-ksWV330WbfazLUyOuR59sers&si=au5IYGCrsX4mPjne 
+videos playlist neural networks : 
+https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
+
+OCAtari documentation
+https://oc-atari.readthedocs.io/en/latest/
+OCAtari paper:
+https://arxiv.org/pdf/2306.08649
+
+
+
+Interesting github OCAtari repo:
+https://github.com/k4ntz/MOC.git
