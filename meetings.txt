@@ -1,7 +1,7 @@
 week1:
 introduction to the topic, read dQN paper
 
-meeting2:
+meeting2:`
 help wth setup, training an agent to play lunar lander game
 
 meeting3: 10/10/2023
