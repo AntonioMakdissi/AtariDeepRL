@@ -1,1 +1,2 @@
 Task:
+prepare a presentation explaining how the library works

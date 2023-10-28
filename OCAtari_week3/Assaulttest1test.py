@@ -6,6 +6,8 @@ from stable_baselines3 import DQN
 from stable_baselines3.dqn import CnnPolicy
 from stable_baselines3.common.vec_env import VecFrameStack
 from stable_baselines3 import DQN
+from stable_baselines3.common.evaluation import evaluate_policy
+from stable_baselines3.common.atari_wrappers import AtariWrapper
 import gym_wrappers
 from ocatari.core import OCAtari
 #########################################
@@ -29,7 +31,8 @@ hyperparams = {
 # mode="ram": Provides access to the game's memory (RAM) content. You can read and write values to specific RAM addresses, which can be useful for debugging and memory manipulation.
 
 # mode="ram_raw": Combines both raw pixel data and RAM access, allowing you to interact with both the game screen and its memory.
-env = OCAtari("AssaultNoFrameskip-v4", mode="raw", render_mode="human")  # set game
+env = OCAtari("AssaultNoFrameskip-v4", mode="vision", render_mode="human")  # set game
+eval_env = OCAtari("AssaultNoFrameskip-v4", mode="vision", render_mode="rgb_array") 
 # Get observation space information
 # height, width, channels = env.observation_space.shape
 actions = env.action_space.n
@@ -39,16 +42,21 @@ print(f"available actions: {actions}")  # nbr of actions
 # env = VecFrameStack(env, n_stack=4)
 
 
-env = OCAtari("Assault-v4", mode="raw", render_mode="rgb_array")
+# env = OCAtari("Assault-v4", mode="raw", render_mode="rgb_array")
 
-env = GymAtariWrapper(env)
+env = AtariWrapper(env)
 
 observation, info = env.reset()
 
 model = DQN(CnnPolicy, env, verbose=0)
 
 # # Train the model
-# model.learn(total_timesteps=10_000)
+model.learn(total_timesteps=10_000)
+
+# Evaluate the trained agent
+#mean_reward, std_reward = evaluate_policy(model, eval_env, n_eval_episodes=100)
+
+#print(f"mean_reward:{mean_reward:.2f} +/- {std_reward:.2f}")
 
 # # Loop through the RAM addresses
 # for ram_address in range(128):

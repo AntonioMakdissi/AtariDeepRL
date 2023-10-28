@@ -7,4 +7,7 @@ help wth setup, training an agent to play lunar lander game
 meeting3: 10/10/2023
 to train an agent of stable_baslines3 with ocatari
 
-meeting4:
+meeting4:23/10/2023
+done online via discord
+
+meeting5:
