@@ -31,10 +31,11 @@ hyperparams = {
 # mode="ram": Provides access to the game's memory (RAM) content. You can read and write values to specific RAM addresses, which can be useful for debugging and memory manipulation.
 
 # mode="ram_raw": Combines both raw pixel data and RAM access, allowing you to interact with both the game screen and its memory.
-env = OCAtari("AssaultNoFrameskip-v4", mode="vision", render_mode="human")  # set game
-eval_env = OCAtari("AssaultNoFrameskip-v4", mode="vision", render_mode="rgb_array") 
+env = OCAtari("AssaultNoFrameskip-v4", mode="raw", render_mode="human")  # set game
+eval_env = OCAtari("AssaultNoFrameskip-v4", mode="raw", render_mode="rgb_array") 
 # Get observation space information
-# height, width, channels = env.observation_space.shape
+height, width, channels = env.observation_space.shape
+print(env._get_obs())
 actions = env.action_space.n
 print(f"available actions: {actions}")  # nbr of actions
 

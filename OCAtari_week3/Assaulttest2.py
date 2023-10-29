@@ -37,11 +37,11 @@ for i in range(10000):
     obs, reward, terminated, truncated, info = env.step(action)
     ram = env._env.unwrapped.ale.getRAM()
     if i % 5 == 0:
-        # print(env.objects)
-        # print("Enemy_app: " + str(ram[54:57]))
-        # print("enemy_type " + str(ram[40:42]))
-        # print("enemy_x " + str(ram[33:36]))
-        # print("enemy_x_2 " + str(ram[36:39]))
+        print(env.objects)
+        print("Enemy_app: " + str(ram[54:57]))
+        print("enemy_type " + str(ram[40:42]))
+        print("enemy_x " + str(ram[33:36]))
+        print("enemy_x_2 " + str(ram[36:39]))
         print(ram[40])
         for obj in env.objects:
             x, y = obj.xy
@@ -59,3 +59,8 @@ for i in range(10000):
         observation, info = env.reset()
     # modify and display render
 env.close()
+
+#can be used to identify for which attribute each RAM state stands by setting the RAM values 
+# for each RAM position or a user-defined slice of the RAM positions. 
+# After each position ipdb stops the game and the rendered image, 
+# so that you can see which object position exactly changed.
