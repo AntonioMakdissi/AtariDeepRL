@@ -10,4 +10,9 @@ to train an agent of stable_baslines3 with ocatari
 meeting4:23/10/2023
 done online via discord
 
+holidays
+
 meeting5:
+
+
+
